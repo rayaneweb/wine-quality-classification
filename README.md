@@ -24,6 +24,9 @@ analysees, puis utilisees pour comparer plusieurs modeles de classification.
 |   |-- projet_vin_ml_simple.ipynb
 |   `-- model_vin.joblib
 |-- rapport/
+|-- Dockerfile
+|-- docker-compose.yml
+|-- requirements-docker.txt
 |-- requirements.txt
 `-- README.md
 ```
@@ -109,6 +112,39 @@ jupyter notebook notebooks/projet_vin_ml_simple.ipynb
 
 Executer les cellules dans l'ordre pour reproduire l'analyse, entrainer les
 modeles et generer le fichier `model_vin.joblib`.
+
+## Lancer avec Docker
+
+Le projet peut aussi etre lance dans un conteneur Docker, sans installer les
+dependances Python directement sur la machine.
+
+Construire l'image :
+
+```powershell
+docker build -t projet-vin .
+```
+
+Lancer Jupyter :
+
+```powershell
+docker run --rm -p 8888:8888 -v "${PWD}:/app" projet-vin
+```
+
+Ouvrir ensuite l'URL avec token affichee dans le terminal, de la forme :
+
+```text
+http://127.0.0.1:8888/tree?token=...
+```
+
+Avec Docker Compose :
+
+```powershell
+docker compose up --build
+```
+
+Le fichier `requirements-docker.txt` contient les dependances utiles au
+notebook dans le conteneur. Il evite d'installer certains paquets propres a
+l'environnement Windows local.
 
 ## Utiliser le modele sauvegarde
 
