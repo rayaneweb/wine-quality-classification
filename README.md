@@ -3,6 +3,12 @@
 Projet de machine learning visant a predire si un vin est considere comme
 **bon** (`quality >= 7`) a partir de mesures physicochimiques.
 
+## Auteurs
+
+- Rayane Ait Braham
+- Tammy Benmimoun
+- Ahmed Hammadi
+
 Le projet utilise les jeux de donnees *Wine Quality* de Cortez et al. sur les
 vins rouges et blancs de type vinho verde. Les donnees sont nettoyees,
 analysees, puis utilisees pour comparer plusieurs modeles de classification.
