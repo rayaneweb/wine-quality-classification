@@ -1,0 +1,48 @@
+# Environnement Python
+.venv/
+venv/
+env/
+ENV/
+
+# Caches Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Fichiers temporaires LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+# Editeurs / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Systeme
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires
+*.tmp
+*.temp
+~$*
